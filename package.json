@@ -1,8 +1,11 @@
 {
+  "name": "@hugsmidjan/hyphen",
+  "version": "0",
   "private": true,
   "description": "Development environment for the lib.",
   "type": "module",
   "scripts": {
+    "publish:package": "npm run build:package && cd ./package && npm publish",
     "build:docs": "cd ./storybook && npm run build && cd .. && cp ./01.png ./docs",
     "build:package": "rm -rf ./package && node ./scripts/build-package.cjs",
     "build:patterns": "node ./scripts/build-patterns.cjs",
@@ -17,10 +20,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ytiurin/hyphen"
+    "url": "git+https://github.com/hugsmidjan/hyphen.git"
   },
   "license": "ISC",
   "devDependencies": {
+    "@types/hyphen": "^1.6.7",
     "@eslint/eslintrc": "^3.3.5",
     "@eslint/js": "^10.0.1",
     "@prettier/sync": "^0.6.1",
