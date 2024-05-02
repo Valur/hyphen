@@ -1,8 +1,11 @@
 {
+  "name": "hyphen",
+  "version": "1.10.5",
   "private": true,
   "description": "Development environment for the lib.",
   "type": "module",
   "scripts": {
+    "postinstall": "npm run build:package",
     "build:docs": "cd ./storybook && npm run build && cd .. && cp ./01.png ./docs",
     "build:package": "rm -rf ./package && node ./scripts/build-package.cjs",
     "build:patterns": "node ./scripts/build-patterns.cjs",
@@ -13,6 +16,9 @@
     "watch:package": "npx nodemon -w ./export-contract.js -w ./hyphen.js ./scripts/build-package.cjs",
     "watch:src": "npx nodemon -w ./src ./scripts/build-src.cjs",
     "watch": "npm run watch:src & npm run watch:package"
+  },
+  "exports": {
+    "./*": "./package/*"
   },
   "repository": {
     "type": "git",
