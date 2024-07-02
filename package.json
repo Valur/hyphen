@@ -1,6 +1,6 @@
 {
   "name": "hyphen",
-  "version": "1.10.5",
+  "version": "1.10.6",
   "private": true,
   "description": "Development environment for the lib.",
   "type": "module",
@@ -26,6 +26,7 @@
   },
   "license": "ISC",
   "devDependencies": {
+    "@types/hyphen": "^1.6.7",
     "all-contributors-cli": "^6.26.1",
     "esbuild": "0.19.5",
     "eslint": "^6.8.0",

@@ -1,10 +1,10 @@
 {
-  "name": "hyphen",
-  "version": "1.10.5",
+  "name": "@hugsmidjan/hyphen",
+  "version": "1.10.6",
   "description": "Text hyphenation in Javascript. - Fork with improved icelandic hyphenation based on https://repository.clarin.is/repository/xmlui/handle/20.500.12537/86",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Valur/hyphen"
+    "url": "git+https://github.com/hugsmidjan/hyphen"
   },
   "keywords": [
     "hyphen",
@@ -17,9 +17,6 @@
     "Valur Sverrison <valur@hugsmidjan.is>"
   ],
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ytiurin/hyphen/issues"
-  },
   "homepage": "https://ytiurin.github.io/hyphen",
   "browser": "./hyphen.js"
 }

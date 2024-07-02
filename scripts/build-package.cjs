@@ -1,6 +1,7 @@
 const DIR_PACKAGE = "package";
 const DIR_PATTERNS = "patterns";
 const DIR_SCRIPTS = "scripts";
+const TYPES = "node_modules/@types/hyphen";
 
 const aliases = [
   ["de", "de-1996"],
@@ -31,6 +32,7 @@ const makeExport = locale =>
 
 const { basename, dirname, join, resolve, sep } = require("path");
 const {
+  cpSync,
   copyFileSync,
   existsSync,
   mkdirSync,
@@ -97,5 +99,23 @@ buildFiles(
   alias => pathTo(DIR_PACKAGE, alias[0], "index.js"),
   alias => makeAlias(alias[1])
 );
+
+/******************************************************************************/
+console.log(`Copying project types`);
+
+function copyTypes(source, dest) {
+  const files = readdirSync(source).map(filename => ({
+    filename,
+    path: join(source, filename)
+  }));
+  files.forEach(f => {
+    if (f.filename.includes(".d.ts")) {
+      copyFileSync(f.path, join(dest, f.filename));
+    }
+  });
+}
+
+copyTypes(TYPES, DIR_PACKAGE);
+
 /******************************************************************************/
 console.log(`Done`);
