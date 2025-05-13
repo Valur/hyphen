@@ -1,6 +1,6 @@
 {
   "name": "hyphen",
-  "version": "1.10.6",
+  "version": "1.10.7",
   "private": true,
   "description": "Development environment for the lib.",
   "type": "module",
@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ytiurin/hyphen"
+    "url": "git+https://github.com/ytiurin/hyphen.git"
   },
   "license": "ISC",
   "devDependencies": {
